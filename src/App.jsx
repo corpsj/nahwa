@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 // ===== DATA =====
 const OCCASIONS = [
@@ -569,7 +569,7 @@ export default function NahwaApp() {
   const goTo = (s) => { setScreen(s); scrollToTop(); };
 
   return (
-    <div className="min-h-screen bg-stone-50" style={{ fontFamily: "'Pretendard', -apple-system, sans-serif" }}>
+    <div className="min-h-screen bg-stone-50 font-sans">
       {screen === "landing" && (
         <LandingScreen onStart={() => goTo("occasion")} />
       )}
