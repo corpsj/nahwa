@@ -7,46 +7,25 @@
   --font-serif: 'Noto Serif KR', Georgia, 'Times New Roman', serif;
 }
 
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: #2B2B2B;
+  }
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D4C5B5; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #B5ADA5; }
 
-body {
-  font-family: var(--font-sans);
-  line-height: 1.6;
-  color: #2B2B2B;
-}
-
-/* Smooth page transitions */
-.transition-all {
-  transition-property: all;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #D4C5B5;
-  border-radius: 3px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #B5ADA5;
-}
-
-/* Selection color matching brand */
 ::selection {
   background-color: rgba(184, 105, 78, 0.15);
   color: #2B2B2B;
